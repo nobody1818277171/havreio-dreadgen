@@ -1,0 +1,67 @@
+{
+    "advancedObjectDef": {
+        "canRotate": true,
+        "renderingLayers": [
+            {
+                "type": 1
+            },
+            {
+                "type": 1,
+                "radiusFactor": 0.7
+            }
+        ],
+        "autoTurrets": [
+            {
+                "advancedObjectDef": {
+                    "renderingLayers": [
+                        {
+                            "type": 1,
+                            "radiusFactor": 0.5,
+                            "color": 1
+                        }
+                    ],
+                    "barrels": [
+                        {
+                            "angle": 0,
+                            "renderingShapes": [
+                                {
+                                    "type": 0,
+                                    "width": 0.7,
+                                    "length": 55
+                                }
+                            ],
+                            "stats": {
+                                "recoilFactor": 0.3,
+                                "bulletDef": {
+                                    "advancedObjectDef": {
+                                        "renderingLayers": [
+                                            {
+                                                "type": 1
+                                            }
+                                        ]
+                                    },
+                                    "type": 0,
+                                    "sizeFactor": 0.7,
+                                    "damageFactor": 0.3,
+                                    "speedFactor": 1.2
+                                }
+                            },
+                            "bulletXOffset": 27.5
+                        }
+                    ]
+                },
+                "isAbove": true,
+                "isControllable": false,
+                "angle": 0,
+                "autoSpinWhenUnused": true,
+                "aiSettingsPreset": 1
+            }
+        ]
+    },
+    "key": "0084dec4-be5d-4800-baef-8872c777b654",
+    "name": "Pollus",
+    "upgradeMessage": "b-Root-1",
+    "botAISettings": {
+        "aiType": 10
+    }
+}

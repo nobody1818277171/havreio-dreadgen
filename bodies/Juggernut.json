@@ -1,0 +1,25 @@
+{
+    "advancedObjectDef": {
+        "canRotate": true,
+        "renderingLayers": [
+            {
+                "type": 1,
+                "radiusFactor": 1.1,
+                "color": 2
+            },
+            {
+                "type": 1
+            }
+        ]
+    },
+    "key": "7c53f67f-13dd-4a5e-997f-861ff86c240b",
+    "name": "Juggernut",
+    "upgradeMessage": "b-Root-1",
+    "statFactors": {
+        "health": 1.5,
+        "movementSpeed": 0.7
+    },
+    "botAISettings": {
+        "aiType": 10
+    }
+}

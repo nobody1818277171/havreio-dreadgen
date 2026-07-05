@@ -1,0 +1,130 @@
+{
+    "advancedObjectDef": {
+        "canRotate": true,
+        "renderingLayers": [
+            {
+                "type": 1
+            }
+        ],
+        "barrels": [
+            {
+                "angle": 0,
+                "yOffset": 0,
+                "renderingShapes": [
+                    {
+                        "type": 0,
+                        "width": 1.2,
+                        "length": 95
+                    }
+                ],
+                "stats": {
+                    "reloadFactor": 1.2,
+                    "bulletDef": {
+                        "advancedObjectDef": {
+                            "renderingLayers": [
+                                {
+                                    "type": 1
+                                }
+                            ]
+                        },
+                        "type": 0,
+                        "sizeFactor": 1.2,
+                        "healthFactor": 1.2,
+                        "spreadFactor": 0
+                    }
+                },
+                "bulletXOffset": 47.5
+            },
+            {
+                "angle": -180,
+                "yOffset": 0,
+                "renderingShapes": [
+                    {
+                        "type": 0,
+                        "width": 1.2,
+                        "length": 95
+                    }
+                ],
+                "stats": {
+                    "reloadFactor": 1.2,
+                    "bulletDef": {
+                        "advancedObjectDef": {
+                            "renderingLayers": [
+                                {
+                                    "type": 1
+                                }
+                            ]
+                        },
+                        "type": 0,
+                        "sizeFactor": 1.2,
+                        "healthFactor": 1.2,
+                        "spreadFactor": 0
+                    }
+                },
+                "bulletXOffset": 47.5
+            },
+            {
+                "angle": 90,
+                "yOffset": 0,
+                "renderingShapes": [
+                    {
+                        "type": 0,
+                        "width": 1.2,
+                        "length": 95
+                    }
+                ],
+                "stats": {
+                    "reloadFactor": 1.2,
+                    "bulletDef": {
+                        "advancedObjectDef": {
+                            "renderingLayers": [
+                                {
+                                    "type": 1
+                                }
+                            ]
+                        },
+                        "type": 0,
+                        "sizeFactor": 1.2,
+                        "healthFactor": 1.2,
+                        "spreadFactor": 0
+                    }
+                },
+                "bulletXOffset": 47.5
+            },
+            {
+                "angle": -90,
+                "yOffset": 0,
+                "renderingShapes": [
+                    {
+                        "type": 0,
+                        "width": 1.2,
+                        "length": 95
+                    }
+                ],
+                "stats": {
+                    "reloadFactor": 1.2,
+                    "bulletDef": {
+                        "advancedObjectDef": {
+                            "renderingLayers": [
+                                {
+                                    "type": 1
+                                }
+                            ]
+                        },
+                        "type": 0,
+                        "sizeFactor": 1.2,
+                        "healthFactor": 1.2,
+                        "spreadFactor": 0
+                    }
+                },
+                "bulletXOffset": 47.5
+            }
+        ]
+    },
+    "key": "0255e4f5-a782-45a9-a0eb-05d784ad1949",
+    "name": "Doblifier",
+    "upgradeMessage": "w-Pacifier-2",
+    "botAISettings": {
+        "aiType": 10
+    }
+}

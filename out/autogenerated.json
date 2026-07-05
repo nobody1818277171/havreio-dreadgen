@@ -1,0 +1,1929 @@
+{
+  "startingTankOverride": "",
+  "tanks": [
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Auto Tank",
+      "upgradesFrom": [
+        "tank"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 30,
+      "name": "Auto 3",
+      "upgradesFrom": [
+        "flankGuard"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Auto 5",
+      "upgradesFrom": [
+        "auto3",
+        "quadTank"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 15,
+      "name": "Flank Guard",
+      "upgradesFrom": [
+        "tank"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Booster",
+      "upgradesFrom": [
+        "triAngle"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Fighter",
+      "upgradesFrom": [
+        "triAngle"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Phoenix",
+      "upgradesFrom": [
+        "triAngle"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 30,
+      "name": "Tri-Angle",
+      "upgradesFrom": [
+        "flankGuard"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Tri-Defender",
+      "upgradesFrom": [
+        "triAngle"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Annihilator",
+      "upgradesFrom": [
+        "destroyer"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 30,
+      "name": "Destroyer",
+      "upgradesFrom": [
+        "machineGun"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Gunner Destroyer",
+      "upgradesFrom": [
+        "destroyer"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Hybrid",
+      "upgradesFrom": [
+        "destroyer"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Railgun",
+      "upgradesFrom": [
+        "destroyer"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Chain Gun",
+      "upgradesFrom": [
+        "gatlingGun"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Gatling Destroyer",
+      "upgradesFrom": [
+        "gatlingGun"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 30,
+      "name": "Gatling Gun",
+      "upgradesFrom": [
+        "machineGun"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Gatling Gunner",
+      "upgradesFrom": [
+        "gatlingGun"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Gatling Machine",
+      "upgradesFrom": [
+        "gatlingGun"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Minigun",
+      "upgradesFrom": [
+        "gatlingGun"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Barricade",
+      "upgradesFrom": [
+        "launcher"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Glider",
+      "upgradesFrom": [
+        "launcher"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 30,
+      "name": "Launcher",
+      "upgradesFrom": [
+        "machineGun"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Missile",
+      "upgradesFrom": [
+        "launcher"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Rocketeer",
+      "upgradesFrom": [
+        "launcher"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Skimmer",
+      "upgradesFrom": [
+        "launcher"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 15,
+      "name": "Machine Gun",
+      "upgradesFrom": [
+        "tank"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Junk Shot",
+      "upgradesFrom": [
+        "shotgun",
+        "trapper"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Pellet Shot",
+      "upgradesFrom": [
+        "shotgun"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 30,
+      "name": "Shotgun",
+      "upgradesFrom": [
+        "machineGun"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Twin Shotgun",
+      "upgradesFrom": [
+        "shotgun"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Sprayer",
+      "upgradesFrom": [
+        "machineGun"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Auto Smasher",
+      "upgradesFrom": [
+        "smasher"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Kamikaze",
+      "upgradesFrom": [
+        "smasher"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Landmine",
+      "upgradesFrom": [
+        "smasher"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Mega Smasher",
+      "upgradesFrom": [
+        "smasher"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Slammer",
+      "upgradesFrom": [
+        "smasher"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 30,
+      "name": "Smasher",
+      "upgradesFrom": [
+        "tank"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Spike",
+      "upgradesFrom": [
+        "smasher"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Archer",
+      "upgradesFrom": [
+        "assassin"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 30,
+      "name": "Assassin",
+      "upgradesFrom": [
+        "sniper"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Flanker",
+      "upgradesFrom": [
+        "assassin"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Ranger",
+      "upgradesFrom": [
+        "assassin"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Sideliner",
+      "upgradesFrom": [
+        "assassin"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Stalker",
+      "upgradesFrom": [
+        "assassin"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 30,
+      "name": "Assembler",
+      "upgradesFrom": [
+        "sniper"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Factory",
+      "upgradesFrom": [
+        "assembler"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Producer",
+      "upgradesFrom": [
+        "assembler"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Burst Shot",
+      "upgradesFrom": [
+        "hunter"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 30,
+      "name": "Hunter",
+      "upgradesFrom": [
+        "sniper"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Predator",
+      "upgradesFrom": [
+        "hunter"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "X-Hunter",
+      "upgradesFrom": [
+        "hunter"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Gunnermancer",
+      "upgradesFrom": [
+        "overseer"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Manager",
+      "upgradesFrom": [
+        "overseer"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Necromancer",
+      "upgradesFrom": [
+        "overseer"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Overlord",
+      "upgradesFrom": [
+        "overseer"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 30,
+      "name": "Overseer",
+      "upgradesFrom": [
+        "sniper"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Oversight",
+      "upgradesFrom": [
+        "overseer"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 15,
+      "name": "Sniper",
+      "upgradesFrom": [
+        "tank"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Auto Trapper",
+      "upgradesFrom": [
+        "trapper"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Mega Trapper",
+      "upgradesFrom": [
+        "trapper"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Overtrapper",
+      "upgradesFrom": [
+        "trapper",
+        "overseer"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 30,
+      "name": "Trapper",
+      "upgradesFrom": [
+        "sniper"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Tri-Trapper",
+      "upgradesFrom": [
+        "trapper"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 0,
+      "name": "Tank",
+      "upgradesFrom": [],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Auto Gunner",
+      "upgradesFrom": [
+        "gunner",
+        "auto3"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 30,
+      "name": "Gunner",
+      "upgradesFrom": [
+        "twin"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Gunner Trapper",
+      "upgradesFrom": [
+        "gunner"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Overgunner",
+      "upgradesFrom": [
+        "gunner"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Streamliner",
+      "upgradesFrom": [
+        "gunner"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Octo Tank",
+      "upgradesFrom": [
+        "quadTank"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 30,
+      "name": "Quad Tank",
+      "upgradesFrom": [
+        "twin",
+        "flankGuard"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Penta Shot",
+      "upgradesFrom": [
+        "tripleShot"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Spread Shot",
+      "upgradesFrom": [
+        "tripleShot"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Triple Flank",
+      "upgradesFrom": [
+        "tripleShot",
+        "twinFlank"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 30,
+      "name": "Triple Shot",
+      "upgradesFrom": [
+        "twin"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Triplet",
+      "upgradesFrom": [
+        "tripleShot"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 15,
+      "name": "Twin",
+      "upgradesFrom": [
+        "tank"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Battleship",
+      "upgradesFrom": [
+        "twinFlank"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Triple Twin",
+      "upgradesFrom": [
+        "twinFlank"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 30,
+      "name": "Twin Flank",
+      "upgradesFrom": [
+        "twin",
+        "flankGuard"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": null,
+      "levelRequirement": 45,
+      "name": "Twin Guard",
+      "upgradesFrom": [
+        "twinFlank",
+        "quadTank"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": {
+        "isStartingTank": true,
+        "advancedObjectDef": {
+          "canRotate": true,
+          "allowRecentering": true,
+          "renderingLayers": [
+            {
+              "type": 1
+            },
+            {
+              "type": 1,
+              "radiusFactor": 0.5,
+              "color": 4
+            },
+            {
+              "type": 1,
+              "radiusFactor": 0.45,
+              "color": 5
+            },
+            {
+              "type": 1,
+              "radiusFactor": 0.4,
+              "color": 6
+            },
+            {
+              "type": 1,
+              "radiusFactor": 0.35,
+              "color": 7
+            },
+            {
+              "type": 1,
+              "radiusFactor": 0.3,
+              "color": 8
+            },
+            {
+              "type": 1,
+              "radiusFactor": 0.25,
+              "color": 9
+            },
+            {
+              "type": 1,
+              "radiusFactor": 0.2,
+              "color": 3,
+              "customColor": [
+                255,
+                255,
+                255
+              ]
+            }
+          ],
+          "reCenteringOffset": -22.5
+        },
+        "key": "tank",
+        "name": "Dreadnoughts",
+        "upgradeKeys": [
+          "twin",
+          "sniper",
+          "machineGun",
+          "flankGuard",
+          "smasher",
+          "autoTank"
+        ],
+        "botAISettings": {
+          "aiType": 10
+        }
+      },
+      "levelRequirement": 65,
+      "name": "Dreadnoughts",
+      "upgradesFrom": [
+        "autoTank",
+        "auto5",
+        "booster",
+        "fighter",
+        "phoenix",
+        "tri-defender",
+        "annihilator",
+        "gunnerDestroyer",
+        "hybrid",
+        "railgun",
+        "chainGun",
+        "gatlingDestroyer",
+        "gatlingGunner",
+        "gatlingMachine",
+        "minigun",
+        "barricade",
+        "glider",
+        "missile",
+        "rocketeer",
+        "skimmer",
+        "junkShot",
+        "pelletShot",
+        "twinShotgun",
+        "sprayer",
+        "autoSmasher",
+        "kamikaze",
+        "landmine",
+        "megaSmasher",
+        "slammer",
+        "spike",
+        "archer",
+        "flanker",
+        "ranger",
+        "sideliner",
+        "stalker",
+        "factory",
+        "producer",
+        "burstShot",
+        "predator",
+        "x-hunter",
+        "gunnermancer",
+        "manager",
+        "necromancer",
+        "overlord",
+        "oversight",
+        "autoTrapper",
+        "megaTrapper",
+        "overtrapper",
+        "tri-trapper",
+        "autoGunner",
+        "gunnerTrapper",
+        "overgunner",
+        "streamliner",
+        "octoTank",
+        "pentaShot",
+        "spreadShot",
+        "tripleFlank",
+        "triplet",
+        "battleship",
+        "tripleTwin",
+        "twinGuard"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": {
+        "advancedObjectDef": {
+          "canRotate": true,
+          "renderingLayers": [
+            {
+              "type": 1,
+              "radiusFactor": 1.1,
+              "color": 2
+            },
+            {
+              "type": 1
+            }
+          ],
+          "barrels": [
+            {
+              "angle": 0,
+              "yOffset": 0,
+              "renderingShapes": [
+                {
+                  "type": 0,
+                  "width": 1,
+                  "length": 95
+                }
+              ],
+              "stats": {
+                "bulletDef": {
+                  "advancedObjectDef": {
+                    "renderingLayers": [
+                      {
+                        "type": 1
+                      }
+                    ]
+                  },
+                  "type": 0
+                }
+              },
+              "bulletXOffset": 47.5
+            },
+            {
+              "angle": -180,
+              "yOffset": 0,
+              "renderingShapes": [
+                {
+                  "type": 0,
+                  "width": 1,
+                  "length": 95
+                }
+              ],
+              "stats": {
+                "bulletDef": {
+                  "advancedObjectDef": {
+                    "renderingLayers": [
+                      {
+                        "type": 1
+                      }
+                    ]
+                  },
+                  "type": 0
+                }
+              },
+              "bulletXOffset": 47.5
+            }
+          ],
+          "autoTurrets": []
+        },
+        "key": "7c53f67f-13dd-4a5e-997f-861ff86c240b",
+        "name": "Pacifier-Juggernut",
+        "upgradeMessage": "",
+        "statFactors": {
+          "health": 1.5,
+          "movementSpeed": 0.7
+        },
+        "botAISettings": {
+          "aiType": 10
+        },
+        "DsearchType": "b",
+        "DupgradesFrom": [
+          "Root"
+        ],
+        "Dtier": "1",
+        "allDMeta": [
+          {
+            "DsearchType": "w",
+            "DupgradesFrom": [
+              "Root"
+            ],
+            "Dtier": "1"
+          },
+          {
+            "DsearchType": "b",
+            "DupgradesFrom": [
+              "Root"
+            ],
+            "Dtier": "1"
+          }
+        ]
+      },
+      "levelRequirement": 65,
+      "name": "Pacifier-Juggernut",
+      "upgradesFrom": [
+        "Dreadnoughts"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": {
+        "advancedObjectDef": {
+          "canRotate": true,
+          "renderingLayers": [
+            {
+              "type": 0,
+              "radiusFactor": 1.45,
+              "vertices": 4,
+              "angle": 45,
+              "color": 2
+            },
+            {
+              "type": 0,
+              "radiusFactor": 1.3,
+              "vertices": 4,
+              "angle": 45
+            }
+          ],
+          "barrels": [],
+          "autoTurrets": [
+            {
+              "advancedObjectDef": {
+                "renderingLayers": [
+                  {
+                    "type": 1,
+                    "radiusFactor": 0.25,
+                    "color": 1
+                  }
+                ],
+                "barrels": [
+                  {
+                    "angle": 0,
+                    "renderingShapes": [
+                      {
+                        "type": 0,
+                        "width": 0.35,
+                        "length": 27.5
+                      }
+                    ],
+                    "stats": {
+                      "recoilFactor": 0.3,
+                      "bulletDef": {
+                        "advancedObjectDef": {
+                          "renderingLayers": [
+                            {
+                              "type": 1
+                            }
+                          ]
+                        },
+                        "type": 0,
+                        "sizeFactor": 0.35,
+                        "healthFactor": 0.6,
+                        "damageFactor": 0.3
+                      }
+                    },
+                    "bulletXOffset": 13.75
+                  }
+                ]
+              },
+              "isAbove": true,
+              "isControllable": false,
+              "angle": 45,
+              "xOffset": 45,
+              "autoSpinWhenUnused": true,
+              "aiSettingsPreset": 1
+            },
+            {
+              "advancedObjectDef": {
+                "renderingLayers": [
+                  {
+                    "type": 1,
+                    "radiusFactor": 0.25,
+                    "color": 1
+                  }
+                ],
+                "barrels": [
+                  {
+                    "angle": 0,
+                    "renderingShapes": [
+                      {
+                        "type": 0,
+                        "width": 0.35,
+                        "length": 27.5
+                      }
+                    ],
+                    "stats": {
+                      "recoilFactor": 0.3,
+                      "bulletDef": {
+                        "advancedObjectDef": {
+                          "renderingLayers": [
+                            {
+                              "type": 1
+                            }
+                          ]
+                        },
+                        "type": 0,
+                        "sizeFactor": 0.35,
+                        "healthFactor": 0.6,
+                        "damageFactor": 0.3
+                      }
+                    },
+                    "bulletXOffset": 13.75
+                  }
+                ]
+              },
+              "isAbove": true,
+              "isControllable": false,
+              "angle": 135,
+              "xOffset": 45,
+              "autoSpinWhenUnused": true,
+              "aiSettingsPreset": 1
+            },
+            {
+              "advancedObjectDef": {
+                "renderingLayers": [
+                  {
+                    "type": 1,
+                    "radiusFactor": 0.25,
+                    "color": 1
+                  }
+                ],
+                "barrels": [
+                  {
+                    "angle": 0,
+                    "renderingShapes": [
+                      {
+                        "type": 0,
+                        "width": 0.35,
+                        "length": 27.5
+                      }
+                    ],
+                    "stats": {
+                      "recoilFactor": 0.3,
+                      "bulletDef": {
+                        "advancedObjectDef": {
+                          "renderingLayers": [
+                            {
+                              "type": 1
+                            }
+                          ]
+                        },
+                        "type": 0,
+                        "sizeFactor": 0.35,
+                        "healthFactor": 0.6,
+                        "damageFactor": 0.3
+                      }
+                    },
+                    "bulletXOffset": 13.75
+                  }
+                ]
+              },
+              "isAbove": true,
+              "isControllable": false,
+              "angle": -135,
+              "xOffset": 45,
+              "autoSpinWhenUnused": true,
+              "aiSettingsPreset": 1
+            },
+            {
+              "advancedObjectDef": {
+                "renderingLayers": [
+                  {
+                    "type": 1,
+                    "radiusFactor": 0.25,
+                    "color": 1
+                  }
+                ],
+                "barrels": [
+                  {
+                    "angle": 0,
+                    "renderingShapes": [
+                      {
+                        "type": 0,
+                        "width": 0.35,
+                        "length": 27.5
+                      }
+                    ],
+                    "stats": {
+                      "recoilFactor": 0.3,
+                      "bulletDef": {
+                        "advancedObjectDef": {
+                          "renderingLayers": [
+                            {
+                              "type": 1
+                            }
+                          ]
+                        },
+                        "type": 0,
+                        "sizeFactor": 0.35,
+                        "healthFactor": 0.6,
+                        "damageFactor": 0.3
+                      }
+                    },
+                    "bulletXOffset": 13.75
+                  }
+                ]
+              },
+              "isAbove": true,
+              "isControllable": false,
+              "angle": -45,
+              "xOffset": 45,
+              "autoSpinWhenUnused": true,
+              "aiSettingsPreset": 1
+            },
+            {
+              "advancedObjectDef": {
+                "renderingLayers": [
+                  {
+                    "type": 1,
+                    "radiusFactor": 0.5,
+                    "color": 1
+                  }
+                ],
+                "barrels": [
+                  {
+                    "angle": 0,
+                    "renderingShapes": [
+                      {
+                        "type": 0,
+                        "width": 0.7,
+                        "length": 55
+                      }
+                    ],
+                    "stats": {
+                      "recoilFactor": 0.3,
+                      "bulletDef": {
+                        "advancedObjectDef": {
+                          "renderingLayers": [
+                            {
+                              "type": 1
+                            }
+                          ]
+                        },
+                        "type": 0,
+                        "sizeFactor": 0.7,
+                        "damageFactor": 0.3,
+                        "speedFactor": 1.2
+                      }
+                    },
+                    "bulletXOffset": 27.5
+                  }
+                ]
+              },
+              "isAbove": false,
+              "isControllable": true,
+              "angle": 0,
+              "xOffset": 40,
+              "maxAngle": 80,
+              "aiSettingsPreset": 1
+            },
+            {
+              "advancedObjectDef": {
+                "renderingLayers": [
+                  {
+                    "type": 1,
+                    "radiusFactor": 0.5,
+                    "color": 1
+                  }
+                ],
+                "barrels": [
+                  {
+                    "angle": 0,
+                    "renderingShapes": [
+                      {
+                        "type": 0,
+                        "width": 0.7,
+                        "length": 55
+                      }
+                    ],
+                    "stats": {
+                      "recoilFactor": 0.3,
+                      "bulletDef": {
+                        "advancedObjectDef": {
+                          "renderingLayers": [
+                            {
+                              "type": 1
+                            }
+                          ]
+                        },
+                        "type": 0,
+                        "sizeFactor": 0.7,
+                        "damageFactor": 0.3,
+                        "speedFactor": 1.2
+                      }
+                    },
+                    "bulletXOffset": 27.5
+                  }
+                ]
+              },
+              "isAbove": false,
+              "isControllable": true,
+              "angle": -180,
+              "xOffset": 40,
+              "maxAngle": 80,
+              "aiSettingsPreset": 1
+            },
+            {
+              "advancedObjectDef": {
+                "renderingLayers": [
+                  {
+                    "type": 1,
+                    "radiusFactor": 0.5,
+                    "color": 1
+                  }
+                ],
+                "barrels": [
+                  {
+                    "angle": 0,
+                    "renderingShapes": [
+                      {
+                        "type": 0,
+                        "width": 0.7,
+                        "length": 55
+                      }
+                    ],
+                    "stats": {
+                      "recoilFactor": 0.3,
+                      "bulletDef": {
+                        "advancedObjectDef": {
+                          "renderingLayers": [
+                            {
+                              "type": 1
+                            }
+                          ]
+                        },
+                        "type": 0,
+                        "sizeFactor": 0.7,
+                        "damageFactor": 0.3,
+                        "speedFactor": 1.2
+                      }
+                    },
+                    "bulletXOffset": 27.5
+                  }
+                ]
+              },
+              "isAbove": false,
+              "isControllable": true,
+              "angle": 90,
+              "xOffset": 40,
+              "maxAngle": 80,
+              "aiSettingsPreset": 1
+            },
+            {
+              "advancedObjectDef": {
+                "renderingLayers": [
+                  {
+                    "type": 1,
+                    "radiusFactor": 0.5,
+                    "color": 1
+                  }
+                ],
+                "barrels": [
+                  {
+                    "angle": 0,
+                    "renderingShapes": [
+                      {
+                        "type": 0,
+                        "width": 0.7,
+                        "length": 55
+                      }
+                    ],
+                    "stats": {
+                      "recoilFactor": 0.3,
+                      "bulletDef": {
+                        "advancedObjectDef": {
+                          "renderingLayers": [
+                            {
+                              "type": 1
+                            }
+                          ]
+                        },
+                        "type": 0,
+                        "sizeFactor": 0.7,
+                        "damageFactor": 0.3,
+                        "speedFactor": 1.2
+                      }
+                    },
+                    "bulletXOffset": 27.5
+                  }
+                ]
+              },
+              "isAbove": false,
+              "isControllable": true,
+              "angle": -90,
+              "xOffset": 40,
+              "maxAngle": 80,
+              "aiSettingsPreset": 1
+            }
+          ]
+        },
+        "key": "862b3800-7b33-48c0-91cb-212d0c4369f2",
+        "name": "Automator-Miniser",
+        "upgradeMessage": "",
+        "statFactors": {
+          "health": 1.4,
+          "movementSpeed": 0.8
+        },
+        "botAISettings": {
+          "aiType": 10
+        },
+        "DsearchType": "b",
+        "DupgradesFrom": [
+          "Juggernut",
+          "Pollus"
+        ],
+        "Dtier": "2",
+        "allDMeta": [
+          {
+            "DsearchType": "w",
+            "DupgradesFrom": [
+              "Pacifier"
+            ],
+            "Dtier": "2"
+          },
+          {
+            "DsearchType": "b",
+            "DupgradesFrom": [
+              "Juggernut",
+              "Pollus"
+            ],
+            "Dtier": "2"
+          }
+        ]
+      },
+      "levelRequirement": 85,
+      "name": "Automator-Miniser",
+      "upgradesFrom": [
+        "Pacifier-Juggernut",
+        "Pacifier-Pollus"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": {
+        "advancedObjectDef": {
+          "canRotate": true,
+          "renderingLayers": [
+            {
+              "type": 0,
+              "radiusFactor": 1.45,
+              "vertices": 4,
+              "angle": 45,
+              "color": 2
+            },
+            {
+              "type": 0,
+              "radiusFactor": 1.3,
+              "vertices": 4,
+              "angle": 45
+            }
+          ],
+          "barrels": [
+            {
+              "angle": 0,
+              "yOffset": 0,
+              "renderingShapes": [
+                {
+                  "type": 0,
+                  "width": 1.2,
+                  "length": 95
+                }
+              ],
+              "stats": {
+                "reloadFactor": 1.2,
+                "bulletDef": {
+                  "advancedObjectDef": {
+                    "renderingLayers": [
+                      {
+                        "type": 1
+                      }
+                    ]
+                  },
+                  "type": 0,
+                  "sizeFactor": 1.2,
+                  "healthFactor": 1.2,
+                  "spreadFactor": 0
+                }
+              },
+              "bulletXOffset": 47.5
+            },
+            {
+              "angle": -180,
+              "yOffset": 0,
+              "renderingShapes": [
+                {
+                  "type": 0,
+                  "width": 1.2,
+                  "length": 95
+                }
+              ],
+              "stats": {
+                "reloadFactor": 1.2,
+                "bulletDef": {
+                  "advancedObjectDef": {
+                    "renderingLayers": [
+                      {
+                        "type": 1
+                      }
+                    ]
+                  },
+                  "type": 0,
+                  "sizeFactor": 1.2,
+                  "healthFactor": 1.2,
+                  "spreadFactor": 0
+                }
+              },
+              "bulletXOffset": 47.5
+            },
+            {
+              "angle": 90,
+              "yOffset": 0,
+              "renderingShapes": [
+                {
+                  "type": 0,
+                  "width": 1.2,
+                  "length": 95
+                }
+              ],
+              "stats": {
+                "reloadFactor": 1.2,
+                "bulletDef": {
+                  "advancedObjectDef": {
+                    "renderingLayers": [
+                      {
+                        "type": 1
+                      }
+                    ]
+                  },
+                  "type": 0,
+                  "sizeFactor": 1.2,
+                  "healthFactor": 1.2,
+                  "spreadFactor": 0
+                }
+              },
+              "bulletXOffset": 47.5
+            },
+            {
+              "angle": -90,
+              "yOffset": 0,
+              "renderingShapes": [
+                {
+                  "type": 0,
+                  "width": 1.2,
+                  "length": 95
+                }
+              ],
+              "stats": {
+                "reloadFactor": 1.2,
+                "bulletDef": {
+                  "advancedObjectDef": {
+                    "renderingLayers": [
+                      {
+                        "type": 1
+                      }
+                    ]
+                  },
+                  "type": 0,
+                  "sizeFactor": 1.2,
+                  "healthFactor": 1.2,
+                  "spreadFactor": 0
+                }
+              },
+              "bulletXOffset": 47.5
+            }
+          ],
+          "autoTurrets": [
+            {
+              "advancedObjectDef": {
+                "renderingLayers": [
+                  {
+                    "type": 1,
+                    "radiusFactor": 0.25,
+                    "color": 1
+                  }
+                ],
+                "barrels": [
+                  {
+                    "angle": 0,
+                    "renderingShapes": [
+                      {
+                        "type": 0,
+                        "width": 0.35,
+                        "length": 27.5
+                      }
+                    ],
+                    "stats": {
+                      "recoilFactor": 0.3,
+                      "bulletDef": {
+                        "advancedObjectDef": {
+                          "renderingLayers": [
+                            {
+                              "type": 1
+                            }
+                          ]
+                        },
+                        "type": 0,
+                        "sizeFactor": 0.35,
+                        "healthFactor": 0.6,
+                        "damageFactor": 0.3
+                      }
+                    },
+                    "bulletXOffset": 13.75
+                  }
+                ]
+              },
+              "isAbove": true,
+              "isControllable": false,
+              "angle": 45,
+              "xOffset": 45,
+              "autoSpinWhenUnused": true,
+              "aiSettingsPreset": 1
+            },
+            {
+              "advancedObjectDef": {
+                "renderingLayers": [
+                  {
+                    "type": 1,
+                    "radiusFactor": 0.25,
+                    "color": 1
+                  }
+                ],
+                "barrels": [
+                  {
+                    "angle": 0,
+                    "renderingShapes": [
+                      {
+                        "type": 0,
+                        "width": 0.35,
+                        "length": 27.5
+                      }
+                    ],
+                    "stats": {
+                      "recoilFactor": 0.3,
+                      "bulletDef": {
+                        "advancedObjectDef": {
+                          "renderingLayers": [
+                            {
+                              "type": 1
+                            }
+                          ]
+                        },
+                        "type": 0,
+                        "sizeFactor": 0.35,
+                        "healthFactor": 0.6,
+                        "damageFactor": 0.3
+                      }
+                    },
+                    "bulletXOffset": 13.75
+                  }
+                ]
+              },
+              "isAbove": true,
+              "isControllable": false,
+              "angle": 135,
+              "xOffset": 45,
+              "autoSpinWhenUnused": true,
+              "aiSettingsPreset": 1
+            },
+            {
+              "advancedObjectDef": {
+                "renderingLayers": [
+                  {
+                    "type": 1,
+                    "radiusFactor": 0.25,
+                    "color": 1
+                  }
+                ],
+                "barrels": [
+                  {
+                    "angle": 0,
+                    "renderingShapes": [
+                      {
+                        "type": 0,
+                        "width": 0.35,
+                        "length": 27.5
+                      }
+                    ],
+                    "stats": {
+                      "recoilFactor": 0.3,
+                      "bulletDef": {
+                        "advancedObjectDef": {
+                          "renderingLayers": [
+                            {
+                              "type": 1
+                            }
+                          ]
+                        },
+                        "type": 0,
+                        "sizeFactor": 0.35,
+                        "healthFactor": 0.6,
+                        "damageFactor": 0.3
+                      }
+                    },
+                    "bulletXOffset": 13.75
+                  }
+                ]
+              },
+              "isAbove": true,
+              "isControllable": false,
+              "angle": -135,
+              "xOffset": 45,
+              "autoSpinWhenUnused": true,
+              "aiSettingsPreset": 1
+            },
+            {
+              "advancedObjectDef": {
+                "renderingLayers": [
+                  {
+                    "type": 1,
+                    "radiusFactor": 0.25,
+                    "color": 1
+                  }
+                ],
+                "barrels": [
+                  {
+                    "angle": 0,
+                    "renderingShapes": [
+                      {
+                        "type": 0,
+                        "width": 0.35,
+                        "length": 27.5
+                      }
+                    ],
+                    "stats": {
+                      "recoilFactor": 0.3,
+                      "bulletDef": {
+                        "advancedObjectDef": {
+                          "renderingLayers": [
+                            {
+                              "type": 1
+                            }
+                          ]
+                        },
+                        "type": 0,
+                        "sizeFactor": 0.35,
+                        "healthFactor": 0.6,
+                        "damageFactor": 0.3
+                      }
+                    },
+                    "bulletXOffset": 13.75
+                  }
+                ]
+              },
+              "isAbove": true,
+              "isControllable": false,
+              "angle": -45,
+              "xOffset": 45,
+              "autoSpinWhenUnused": true,
+              "aiSettingsPreset": 1
+            }
+          ]
+        },
+        "key": "862b3800-7b33-48c0-91cb-212d0c4369f2",
+        "name": "Doblifier-Miniser",
+        "upgradeMessage": "",
+        "statFactors": {
+          "health": 1.4,
+          "movementSpeed": 0.8
+        },
+        "botAISettings": {
+          "aiType": 10
+        },
+        "DsearchType": "b",
+        "DupgradesFrom": [
+          "Juggernut",
+          "Pollus"
+        ],
+        "Dtier": "2",
+        "allDMeta": [
+          {
+            "DsearchType": "w",
+            "DupgradesFrom": [
+              "Pacifier"
+            ],
+            "Dtier": "2"
+          },
+          {
+            "DsearchType": "b",
+            "DupgradesFrom": [
+              "Juggernut",
+              "Pollus"
+            ],
+            "Dtier": "2"
+          }
+        ]
+      },
+      "levelRequirement": 85,
+      "name": "Doblifier-Miniser",
+      "upgradesFrom": [
+        "Pacifier-Juggernut",
+        "Pacifier-Pollus"
+      ],
+      "isDisabled": false
+    },
+    {
+      "customDef": {
+        "advancedObjectDef": {
+          "canRotate": true,
+          "renderingLayers": [
+            {
+              "type": 1
+            },
+            {
+              "type": 1,
+              "radiusFactor": 0.7
+            }
+          ],
+          "autoTurrets": [
+            {
+              "advancedObjectDef": {
+                "renderingLayers": [
+                  {
+                    "type": 1,
+                    "radiusFactor": 0.5,
+                    "color": 1
+                  }
+                ],
+                "barrels": [
+                  {
+                    "angle": 0,
+                    "renderingShapes": [
+                      {
+                        "type": 0,
+                        "width": 0.7,
+                        "length": 55
+                      }
+                    ],
+                    "stats": {
+                      "recoilFactor": 0.3,
+                      "bulletDef": {
+                        "advancedObjectDef": {
+                          "renderingLayers": [
+                            {
+                              "type": 1
+                            }
+                          ]
+                        },
+                        "type": 0,
+                        "sizeFactor": 0.7,
+                        "damageFactor": 0.3,
+                        "speedFactor": 1.2
+                      }
+                    },
+                    "bulletXOffset": 27.5
+                  }
+                ]
+              },
+              "isAbove": true,
+              "isControllable": false,
+              "angle": 0,
+              "autoSpinWhenUnused": true,
+              "aiSettingsPreset": 1
+            }
+          ],
+          "barrels": [
+            {
+              "angle": 0,
+              "yOffset": 0,
+              "renderingShapes": [
+                {
+                  "type": 0,
+                  "width": 1,
+                  "length": 95
+                }
+              ],
+              "stats": {
+                "bulletDef": {
+                  "advancedObjectDef": {
+                    "renderingLayers": [
+                      {
+                        "type": 1
+                      }
+                    ]
+                  },
+                  "type": 0
+                }
+              },
+              "bulletXOffset": 47.5
+            },
+            {
+              "angle": -180,
+              "yOffset": 0,
+              "renderingShapes": [
+                {
+                  "type": 0,
+                  "width": 1,
+                  "length": 95
+                }
+              ],
+              "stats": {
+                "bulletDef": {
+                  "advancedObjectDef": {
+                    "renderingLayers": [
+                      {
+                        "type": 1
+                      }
+                    ]
+                  },
+                  "type": 0
+                }
+              },
+              "bulletXOffset": 47.5
+            }
+          ]
+        },
+        "key": "0084dec4-be5d-4800-baef-8872c777b654",
+        "name": "Pacifier-Pollus",
+        "upgradeMessage": "",
+        "botAISettings": {
+          "aiType": 10
+        },
+        "DsearchType": "b",
+        "DupgradesFrom": [
+          "Root"
+        ],
+        "Dtier": "1",
+        "allDMeta": [
+          {
+            "DsearchType": "w",
+            "DupgradesFrom": [
+              "Root"
+            ],
+            "Dtier": "1"
+          },
+          {
+            "DsearchType": "b",
+            "DupgradesFrom": [
+              "Root"
+            ],
+            "Dtier": "1"
+          }
+        ]
+      },
+      "levelRequirement": 65,
+      "name": "Pacifier-Pollus",
+      "upgradesFrom": [
+        "Dreadnoughts"
+      ],
+      "isDisabled": false
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+    "advancedObjectDef": {
+        "canRotate": true,
+        "renderingLayers": [
+            {
+                "type": 1
+            }
+        ],
+        "barrels": [
+            {
+                "angle": 0,
+                "yOffset": 0,
+                "renderingShapes": [
+                    {
+                        "type": 0,
+                        "width": 1,
+                        "length": 95
+                    }
+                ],
+                "stats": {
+                    "bulletDef": {
+                        "advancedObjectDef": {
+                            "renderingLayers": [
+                                {
+                                    "type": 1
+                                }
+                            ]
+                        },
+                        "type": 0
+                    }
+                },
+                "bulletXOffset": 47.5
+            },
+            {
+                "angle": -180,
+                "yOffset": 0,
+                "renderingShapes": [
+                    {
+                        "type": 0,
+                        "width": 1,
+                        "length": 95
+                    }
+                ],
+                "stats": {
+                    "bulletDef": {
+                        "advancedObjectDef": {
+                            "renderingLayers": [
+                                {
+                                    "type": 1
+                                }
+                            ]
+                        },
+                        "type": 0
+                    }
+                },
+                "bulletXOffset": 47.5
+            }
+        ]
+    },
+    "key": "f81dac13-31df-4996-a00e-202315fba737",
+    "name": "Pacifier",
+    "upgradeMessage": "w-Root-1",
+    "botAISettings": {
+        "aiType": 10
+    }
+}
