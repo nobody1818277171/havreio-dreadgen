@@ -17,11 +17,7 @@ const tiers = config.tiers
 //tier array = w array and b array
 //this creates a list of all possible combinations
 const WBarray = [[],[]]
-let map = []; //sorry, ignore this hahaha
-
-for (let i = 0; i <= tiers; i++) {
-  map.push(WBarray)
-}
+let map = [WBarray, WBarray, WBarray, WBarray, WBarray]; //sorry, it needs to be harcoded in, will fix later
 
 
 const bodyPath = 'bodies/';
