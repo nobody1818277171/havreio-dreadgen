@@ -133,19 +133,34 @@ try {
   let newString = ""
   presetJson.tanks.forEach(element => {
     if (element.levelRequirement >= 45) {
-      let ment = JSON.parse(JSON.stringify(element)) 
-      let name = ment.name
-      let words = name.split(" ")
-      words[0] = words[0].toLowerCase()
-      words.forEach(word => {
-        newString += word
-      })
-      console.log(newString)
-      rootDread.upgradesFrom.push(newString)
-      newString = ""
+      if (element.customDef === null) {
+        //regular tanks
+        let ment = JSON.parse(JSON.stringify(element)) 
+        let name = ment.name
+        let words = name.split(" ")
+        if (words.length == 1) {
+          words = words[0].split("-") //name has dash
+        }
+        words[0] = words[0].toLowerCase()
+        words.forEach(word => {
+          newString += word
+        })
+        console.log(newString)
+        rootDread.upgradesFrom.push(newString)
+        newString = ""
+    } else {
+      //added custom tanks
+      rootDread.upgradesFrom.push(element.name)
+    }
     }
   })
   presetJson.tanks.push(rootDread)
+
+
+
+
+
+
   let currentBody = null;
   gotBodies.forEach(bodo => {
     console.log(bodo.name)
