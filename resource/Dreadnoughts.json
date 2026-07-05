@@ -1,0 +1,66 @@
+{
+    "isStartingTank": true,
+    "advancedObjectDef": {
+        "canRotate": true,
+        "allowRecentering": true,
+        "renderingLayers": [
+            {
+                "type": 1
+            },
+            {
+                "type": 1,
+                "radiusFactor": 0.5,
+                "color": 4
+            },
+            {
+                "type": 1,
+                "radiusFactor": 0.45,
+                "color": 5
+            },
+            {
+                "type": 1,
+                "radiusFactor": 0.4,
+                "color": 6
+            },
+            {
+                "type": 1,
+                "radiusFactor": 0.35,
+                "color": 7
+            },
+            {
+                "type": 1,
+                "radiusFactor": 0.3,
+                "color": 8
+            },
+            {
+                "type": 1,
+                "radiusFactor": 0.25,
+                "color": 9
+            },
+            {
+                "type": 1,
+                "radiusFactor": 0.2,
+                "color": 3,
+                "customColor": [
+                    255,
+                    255,
+                    255
+                ]
+            }
+        ],
+        "reCenteringOffset": -22.5
+    },
+    "key": "tank",
+    "name": "Dreadnoughts",
+    "upgradeKeys": [
+        "twin",
+        "sniper",
+        "machineGun",
+        "flankGuard",
+        "smasher",
+        "autoTank"
+    ],
+    "botAISettings": {
+        "aiType": 10
+    }
+}

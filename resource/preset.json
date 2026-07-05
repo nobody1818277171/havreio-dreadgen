@@ -1,0 +1,749 @@
+{
+    "startingTankOverride": "",
+    "tanks": [
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Auto Tank",
+            "upgradesFrom": [
+                "tank"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 30,
+            "name": "Auto 3",
+            "upgradesFrom": [
+                "flankGuard"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Auto 5",
+            "upgradesFrom": [
+                "auto3",
+                "quadTank"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 15,
+            "name": "Flank Guard",
+            "upgradesFrom": [
+                "tank"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Booster",
+            "upgradesFrom": [
+                "triAngle"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Fighter",
+            "upgradesFrom": [
+                "triAngle"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Phoenix",
+            "upgradesFrom": [
+                "triAngle"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 30,
+            "name": "Tri-Angle",
+            "upgradesFrom": [
+                "flankGuard"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Tri-Defender",
+            "upgradesFrom": [
+                "triAngle"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Annihilator",
+            "upgradesFrom": [
+                "destroyer"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 30,
+            "name": "Destroyer",
+            "upgradesFrom": [
+                "machineGun"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Gunner Destroyer",
+            "upgradesFrom": [
+                "destroyer"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Hybrid",
+            "upgradesFrom": [
+                "destroyer"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Railgun",
+            "upgradesFrom": [
+                "destroyer"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Chain Gun",
+            "upgradesFrom": [
+                "gatlingGun"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Gatling Destroyer",
+            "upgradesFrom": [
+                "gatlingGun"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 30,
+            "name": "Gatling Gun",
+            "upgradesFrom": [
+                "machineGun"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Gatling Gunner",
+            "upgradesFrom": [
+                "gatlingGun"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Gatling Machine",
+            "upgradesFrom": [
+                "gatlingGun"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Minigun",
+            "upgradesFrom": [
+                "gatlingGun"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Barricade",
+            "upgradesFrom": [
+                "launcher"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Glider",
+            "upgradesFrom": [
+                "launcher"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 30,
+            "name": "Launcher",
+            "upgradesFrom": [
+                "machineGun"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Missile",
+            "upgradesFrom": [
+                "launcher"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Rocketeer",
+            "upgradesFrom": [
+                "launcher"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Skimmer",
+            "upgradesFrom": [
+                "launcher"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 15,
+            "name": "Machine Gun",
+            "upgradesFrom": [
+                "tank"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Junk Shot",
+            "upgradesFrom": [
+                "shotgun",
+                "trapper"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Pellet Shot",
+            "upgradesFrom": [
+                "shotgun"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 30,
+            "name": "Shotgun",
+            "upgradesFrom": [
+                "machineGun"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Twin Shotgun",
+            "upgradesFrom": [
+                "shotgun"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Sprayer",
+            "upgradesFrom": [
+                "machineGun"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Auto Smasher",
+            "upgradesFrom": [
+                "smasher"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Kamikaze",
+            "upgradesFrom": [
+                "smasher"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Landmine",
+            "upgradesFrom": [
+                "smasher"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Mega Smasher",
+            "upgradesFrom": [
+                "smasher"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Slammer",
+            "upgradesFrom": [
+                "smasher"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 30,
+            "name": "Smasher",
+            "upgradesFrom": [
+                "tank"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Spike",
+            "upgradesFrom": [
+                "smasher"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Archer",
+            "upgradesFrom": [
+                "assassin"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 30,
+            "name": "Assassin",
+            "upgradesFrom": [
+                "sniper"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Flanker",
+            "upgradesFrom": [
+                "assassin"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Ranger",
+            "upgradesFrom": [
+                "assassin"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Sideliner",
+            "upgradesFrom": [
+                "assassin"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Stalker",
+            "upgradesFrom": [
+                "assassin"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 30,
+            "name": "Assembler",
+            "upgradesFrom": [
+                "sniper"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Factory",
+            "upgradesFrom": [
+                "assembler"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Producer",
+            "upgradesFrom": [
+                "assembler"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Burst Shot",
+            "upgradesFrom": [
+                "hunter"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 30,
+            "name": "Hunter",
+            "upgradesFrom": [
+                "sniper"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Predator",
+            "upgradesFrom": [
+                "hunter"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "X-Hunter",
+            "upgradesFrom": [
+                "hunter"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Gunnermancer",
+            "upgradesFrom": [
+                "overseer"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Manager",
+            "upgradesFrom": [
+                "overseer"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Necromancer",
+            "upgradesFrom": [
+                "overseer"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Overlord",
+            "upgradesFrom": [
+                "overseer"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 30,
+            "name": "Overseer",
+            "upgradesFrom": [
+                "sniper"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Oversight",
+            "upgradesFrom": [
+                "overseer"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 15,
+            "name": "Sniper",
+            "upgradesFrom": [
+                "tank"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Auto Trapper",
+            "upgradesFrom": [
+                "trapper"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Mega Trapper",
+            "upgradesFrom": [
+                "trapper"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Overtrapper",
+            "upgradesFrom": [
+                "trapper",
+                "overseer"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 30,
+            "name": "Trapper",
+            "upgradesFrom": [
+                "sniper"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Tri-Trapper",
+            "upgradesFrom": [
+                "trapper"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 0,
+            "name": "Tank",
+            "upgradesFrom": [],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Auto Gunner",
+            "upgradesFrom": [
+                "gunner",
+                "auto3"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 30,
+            "name": "Gunner",
+            "upgradesFrom": [
+                "twin"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Gunner Trapper",
+            "upgradesFrom": [
+                "gunner"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Overgunner",
+            "upgradesFrom": [
+                "gunner"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Streamliner",
+            "upgradesFrom": [
+                "gunner"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Octo Tank",
+            "upgradesFrom": [
+                "quadTank"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 30,
+            "name": "Quad Tank",
+            "upgradesFrom": [
+                "twin",
+                "flankGuard"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Penta Shot",
+            "upgradesFrom": [
+                "tripleShot"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Spread Shot",
+            "upgradesFrom": [
+                "tripleShot"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Triple Flank",
+            "upgradesFrom": [
+                "tripleShot",
+                "twinFlank"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 30,
+            "name": "Triple Shot",
+            "upgradesFrom": [
+                "twin"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Triplet",
+            "upgradesFrom": [
+                "tripleShot"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 15,
+            "name": "Twin",
+            "upgradesFrom": [
+                "tank"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Battleship",
+            "upgradesFrom": [
+                "twinFlank"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Triple Twin",
+            "upgradesFrom": [
+                "twinFlank"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 30,
+            "name": "Twin Flank",
+            "upgradesFrom": [
+                "twin",
+                "flankGuard"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Twin Guard",
+            "upgradesFrom": [
+                "twinFlank",
+                "quadTank"
+            ],
+            "isDisabled": false
+        }
+    ]
+}
