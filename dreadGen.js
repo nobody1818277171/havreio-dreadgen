@@ -17,7 +17,7 @@ const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 const startlvl = config.startingLevel
 const tierLevels = config.levelsPerTier
 const tiers = config.tiers
-
+const hpMult = config.hpMult
 //planned structure
 //index = by tier array
 //tier array = w array and b array
@@ -189,9 +189,9 @@ try {
         //unused
         let cbFov = currentBody.fovFactor || 1
         let cwFov = currentWep.fovFactor || 1
-        
         definition.fovFactor = cbFov * cwFov
-
+        let oldHp = definition.statFactors.health || 1
+        definition.statFactors.health = oldHp * hpMult
         //name, meta
         definition.name = currentWep.name + '-' + currentBody.name
 
