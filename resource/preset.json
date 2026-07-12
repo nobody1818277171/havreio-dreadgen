@@ -429,6 +429,25 @@
         {
             "customDef": null,
             "levelRequirement": 45,
+            "name": "Gunnermancer",
+            "upgradesFrom": [
+                "gunner",
+                "assembler"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Necromancer",
+            "upgradesFrom": [
+                "assembler"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
             "name": "Producer",
             "upgradesFrom": [
                 "assembler"
@@ -474,25 +493,7 @@
         {
             "customDef": null,
             "levelRequirement": 45,
-            "name": "Gunnermancer",
-            "upgradesFrom": [
-                "overseer"
-            ],
-            "isDisabled": false
-        },
-        {
-            "customDef": null,
-            "levelRequirement": 45,
             "name": "Manager",
-            "upgradesFrom": [
-                "overseer"
-            ],
-            "isDisabled": false
-        },
-        {
-            "customDef": null,
-            "levelRequirement": 45,
-            "name": "Necromancer",
             "upgradesFrom": [
                 "overseer"
             ],
@@ -520,6 +521,15 @@
             "customDef": null,
             "levelRequirement": 45,
             "name": "Oversight",
+            "upgradesFrom": [
+                "overseer"
+            ],
+            "isDisabled": false
+        },
+        {
+            "customDef": null,
+            "levelRequirement": 45,
+            "name": "Ultralord",
             "upgradesFrom": [
                 "overseer"
             ],

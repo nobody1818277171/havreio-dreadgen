@@ -1,4 +1,6 @@
 {
     "startingLevel": 45,
-    "levelsPerTier": 20
+    "levelsPerTier": 15,
+    "tiers": 7,
+    "rootUpgradableTo": true
 }

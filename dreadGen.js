@@ -1,5 +1,11 @@
-const fs = require('fs');
-const path = require('path');
+//import {augBalance, apply, augment} from "./augApply.js";
+//unused
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 let results = [];
 
@@ -17,7 +23,7 @@ const tiers = config.tiers
 //tier array = w array and b array
 //this creates a list of all possible combinations
 const WBarray = [[],[]]
-let map = [WBarray, WBarray, WBarray, WBarray, WBarray]; //hard coding this for now
+let map = [WBarray, WBarray, WBarray, WBarray, WBarray, WBarray]; //expand if you use more than this!
 
 const bodyPath = path.join(__dirname, 'bodies');
 const wepPath = path.join(__dirname, 'weps');
@@ -131,29 +137,31 @@ try {
             isDisabled: false
           }
   let newString = ""
-  presetJson.tanks.forEach(element => {
-    if (element.levelRequirement >= 45) {
-      if (element.customDef === null) {
-        //regular tanks
-        let ment = JSON.parse(JSON.stringify(element)) 
-        let name = ment.name
-        let words = name.split(" ")
-        if (words.length == 1) {
-          words = words[0].split("-") //name has dash
-        }
-        words[0] = words[0].toLowerCase()
-        words.forEach(word => {
-          newString += word
-        })
-        console.log(newString)
-        rootDread.upgradesFrom.push(newString)
-        newString = ""
-    } else {
-      //added custom tanks
-      rootDread.upgradesFrom.push(element.name)
-    }
+  if (config.rootUpgradableTo) {
+    presetJson.tanks.forEach(element => {
+      if (element.levelRequirement >= 45) {
+        if (element.customDef === null) {
+          //regular tanks
+          let ment = JSON.parse(JSON.stringify(element)) 
+          let name = ment.name
+          let words = name.split(" ")
+          if (words.length == 1) {
+            words = words[0].split("-") //name has dash
+          }
+          words[0] = words[0].toLowerCase()
+          words.forEach(word => {
+            newString += word
+          })
+          console.log(newString)
+          rootDread.upgradesFrom.push(newString)
+          newString = ""
+      } else {
+        //added custom tanks
+        rootDread.upgradesFrom.push(element.name)
+      }
     }
   })
+  }
   presetJson.tanks.push(rootDread)
 
 
@@ -164,10 +172,10 @@ try {
   let currentBody = null;
   gotBodies.forEach(bodo => {
     console.log(bodo.name)
-    currentBody = bodo
+    currentBody = JSON.parse(JSON.stringify(bodo))
     gotWeps.forEach(wepo => {
       console.log(wepo.name)
-      let currentWep = wepo
+      let currentWep = JSON.parse(JSON.stringify(wepo))
       if (wepo.Dtier == bodo.Dtier) {
         //combining traits...
         //HELP
@@ -175,9 +183,20 @@ try {
 
         definition.advancedObjectDef.barrels = [...currentBody.advancedObjectDef.barrels, ...currentWep.advancedObjectDef.barrels];
         definition.advancedObjectDef.autoTurrets = [...currentBody.advancedObjectDef.autoTurrets, ...currentWep.advancedObjectDef.autoTurrets];
+        //stat
+
+        //augment(definition)
+        //unused
+        let cbFov = currentBody.fovFactor || 1
+        let cwFov = currentWep.fovFactor || 1
+        
+        definition.fovFactor = cbFov * cwFov
+
+        //name, meta
         definition.name = currentWep.name + '-' + currentBody.name
 
         definition.allDMeta = combineMeta(currentWep, currentBody)
+
         results.push(definition);
         console.log(definition.name);
       }
@@ -192,6 +211,7 @@ try {
   try {
   const genedPath = path.join(__dirname, 'out', 'autogen.json');
   fs.writeFileSync(genedPath, JSON.stringify(presetJson, null, 2));
+  console.log("Succesful, check out/autogen!")
     } catch (err) {console.log(err.message)}
 } catch (err) {
   console.error(err);
