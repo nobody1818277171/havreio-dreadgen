@@ -41,4 +41,4 @@ Notes:
     -you can change the base files inside of the resource folder, but keep the file names the same.
 
 If you run into a problem, besides the size of your preset which I can do nothing about, dm me @fractfan64 or open an issue
-    -i dont plan to add wep and body tank stats mixing unless requested
+    -i dont plan to add wep and body tank stats mixing (besides FOV) unless requested
