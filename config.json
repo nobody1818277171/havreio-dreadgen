@@ -3,5 +3,5 @@
     "levelsPerTier": 15,
     "tiers": 7,
     "rootUpgradableTo": true,
-    "addHealthAmount": 0
+    "hpMult": 1
 }
