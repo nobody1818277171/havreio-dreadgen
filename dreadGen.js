@@ -191,7 +191,12 @@ try {
         let cwFov = currentWep.fovFactor || 1
         definition.fovFactor = cbFov * cwFov
         let oldHp = definition.statFactors.health || 1
-        definition.statFactors.health = oldHp * hpMult
+        if (!(definition.statFactors)) {
+          definition.statFactors = {}
+          definition.statFactors.health = hpMult // 1 * 1.5 = 1.5
+        } else {
+          definition.statFactors.health *= hpMult
+        }
         //name, meta
         definition.name = currentWep.name + '-' + currentBody.name
 
