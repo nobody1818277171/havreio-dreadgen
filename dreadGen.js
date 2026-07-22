@@ -191,8 +191,10 @@ try {
         let cwFov = currentWep.fovFactor || 1
         definition.fovFactor = cbFov * cwFov
         let oldHp = definition.statFactors.health || 1
-        if (!(definition.statFactors)) {
-          definition.statFactors = {}
+        if (!(definition.statFactors.health)) {
+          if (!(definition.statFactors)) {
+            definition.statFactors = {}
+          }
           definition.statFactors.health = hpMult // 1 * 1.5 = 1.5
         } else {
           definition.statFactors.health *= hpMult
