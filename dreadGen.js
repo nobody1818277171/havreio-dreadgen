@@ -1,4 +1,4 @@
-//import {augBalance, apply, augment} from "./augApply.js";
+import {augBalance, apply, augment} from "./augApply.js";
 //unused
 import fs from 'fs';
 import path from 'path';
@@ -201,14 +201,14 @@ try {
         definition.advancedObjectDef.autoTurrets = [...currentBody.advancedObjectDef.autoTurrets, ...currentWep.advancedObjectDef.autoTurrets];
         //stat
 
-        //augment(definition)
+        augment(definition)
         //unused
         let cbFov = currentBody.fovFactor || 1
         let cwFov = currentWep.fovFactor || 1
         definition.fovFactor = cbFov * cwFov
         
-        if (!(definition.statFactors.health)) {
-          if (!(definition.statFactors)) {
+        if (!(definition?.statFactors?.health)) {
+          if (!(definition?.statFactors)) {
             definition.statFactors = {}
           }
           definition.statFactors.health = hpMult // 1 * 1.5 = 1.5
