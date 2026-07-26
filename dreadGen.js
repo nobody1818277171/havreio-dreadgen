@@ -17,6 +17,8 @@ const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 const startlvl = config.startingLevel
 const tierLevels = config.levelsPerTier
 const tiers = config.tiers
+const fixed = config.usesFixed
+const fixedLevels = config.fixedTierLevels
 const hpMult = config.hpMult
 //planned structure
 //index = by tier array
@@ -34,6 +36,12 @@ const johnDreadnoughtPath = path.join(__dirname, 'resource', 'Dreadnoughts.json'
 const johnDreadnought = JSON.parse(fs.readFileSync(johnDreadnoughtPath, 'utf8'));
 
 let presetJson = JSON.parse(fs.readFileSync(presetPath, 'utf8'));
+
+let tierOne = startlvl + tierLevels
+
+if (fixed) {
+  tierOne = fixedLevels[0]
+}
 
 
 function addMissing(part) {
@@ -60,6 +68,14 @@ function exportTank(def) { //try {
             upgradesFrom: [], // it will be filled now
             isDisabled: false
           }
+    if (fixed) {
+      try {
+        presetFields.levelRequirement = fixedLevels[def.Dtier - 1]
+      } catch (err) {
+        console.log(err)
+        console.log("fixedTierLevels' array is probably incorrect, maybe you forgot how many tiers you have?")
+      }
+    }
     let wepUpgradeFrom = def.allDMeta[0].DupgradesFrom
     if (wepUpgradeFrom == "Root") {
       presetFields.upgradesFrom = [johnDreadnought.name]
@@ -131,7 +147,7 @@ try {
 
   let rootDread = {
             customDef: johnDreadnought,
-            levelRequirement: 1*tierLevels+startlvl,
+            levelRequirement: tierOne,
             name: johnDreadnought.name,
             upgradesFrom: [], // it will be filled now, god help us
             isDisabled: false
@@ -190,7 +206,7 @@ try {
         let cbFov = currentBody.fovFactor || 1
         let cwFov = currentWep.fovFactor || 1
         definition.fovFactor = cbFov * cwFov
-        let oldHp = definition.statFactors.health || 1
+        
         if (!(definition.statFactors.health)) {
           if (!(definition.statFactors)) {
             definition.statFactors = {}
@@ -199,6 +215,7 @@ try {
         } else {
           definition.statFactors.health *= hpMult
         }
+        
         //name, meta
         definition.name = currentWep.name + '-' + currentBody.name
 
