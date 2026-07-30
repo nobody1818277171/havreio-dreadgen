@@ -3,7 +3,7 @@
     "levelsPerTier": 15,
     "tiers": 3,
     "rootUpgradableTo": true,
-    "hpMult": 1
+    "hpMult": 1,
     "usesFixed": false,
     "fixedTierLevels": [60, 75, 100]
 }
