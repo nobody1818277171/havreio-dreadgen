@@ -1,9 +1,10 @@
 {
     "startingLevel": 45,
     "levelsPerTier": 15,
-    "tiers": 3,
+    "tiers": 7,
+    "doesHex": [false, false, true],
     "rootUpgradableTo": true,
-    "hpMult": 1,
-    "usesFixed": false,
+    "hpMult": 1.3,
+    "usesFixed": true,
     "fixedTierLevels": [60, 75, 100]
 }

@@ -17,6 +17,7 @@ const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 const startlvl = config.startingLevel
 const tierLevels = config.levelsPerTier
 const tiers = config.tiers
+const hexers = config.doesHex
 const fixed = config.usesFixed
 const fixedLevels = config.fixedTierLevels
 const hpMult = config.hpMult
@@ -76,17 +77,36 @@ function exportTank(def) { //try {
         console.log("fixedTierLevels' array is probably incorrect, maybe you forgot how many tiers you have?")
       }
     }
-    let wepUpgradeFrom = def.allDMeta[0].DupgradesFrom
-    if (wepUpgradeFrom == "Root") {
-      presetFields.upgradesFrom = [johnDreadnought.name]
-    } else {
-    let bodUpgradeFrom = def.allDMeta[1].DupgradesFrom
-    wepUpgradeFrom.forEach(wepFrom => {
-      bodUpgradeFrom.forEach(bodFrom => {
-        presetFields.upgradesFrom.push(wepFrom+"-"+bodFrom)
+    if (def.allDMeta[0].Dtier != 1) {
+      if (hexers[def.allDMeta[0].Dtier - 2]) {
+        let wepUpgradeFrom = def.allDMeta[0].DupgradesFrom
+        let bodUpgradeFrom = def.allDMeta[1].DupgradesFrom
+        wepUpgradeFrom.forEach(wepFrom => {
+          map[def.allDMeta[0].Dtier - 2][0].forEach(wep2 => {
+            let combinedName = ""
+            if (wepFrom == wep2) {
+              combinedName = wepFrom + " II"
+            } else {
+              combinedName = wepFrom + "-" + wep2
+            }
+            bodUpgradeFrom.forEach(bodFrom => {
+            presetFields.upgradesFrom.push(combinedName+"-"+bodFrom)
+            })
+          })
+        })
+      } else {
+        let wepUpgradeFrom = def.allDMeta[0].DupgradesFrom
+        let bodUpgradeFrom = def.allDMeta[1].DupgradesFrom
+        wepUpgradeFrom.forEach(wepFrom => {
+          bodUpgradeFrom.forEach(bodFrom => {
+            presetFields.upgradesFrom.push(wepFrom+"-"+bodFrom)
       })
     })
-  }
+      }
+    } else {
+      presetFields.upgradesFrom = [johnDreadnought.name]
+    }
+    
   presetJson.tanks.push(presetFields)
 }
 
@@ -117,6 +137,69 @@ function combineMeta(w, b) {
   //w [0], b [1].
   return [{"DsearchType": w.DsearchType, "DupgradesFrom": w.DupgradesFrom, "Dtier": w.Dtier},{"DsearchType": b.DsearchType, "DupgradesFrom": b.DupgradesFrom, "Dtier": b.Dtier}]
 } 
+
+function rotateAll(def, angle) {
+  let copy = JSON.parse(JSON.stringify(def))
+  copy.advancedObjectDef.barrels.forEach(function (foo) {
+    foo.angle += angle
+  })
+  copy.advancedObjectDef.autoTurrets.forEach(function (foo) {
+    foo.angle += angle
+  })
+  return copy
+}
+
+
+function combine(currentWep, currentBody, setting) {
+  if (setting) {
+  setting.hex = setting?.hex || false
+  }
+  let definition = JSON.parse(JSON.stringify(currentBody)); //i would have never figured this out... smh
+
+  definition.advancedObjectDef.barrels = [...currentBody.advancedObjectDef.barrels, ...currentWep.advancedObjectDef.barrels];
+  definition.advancedObjectDef.autoTurrets = [...currentBody.advancedObjectDef.autoTurrets, ...currentWep.advancedObjectDef.autoTurrets];
+  //stat
+
+  let cbFov = currentBody.fovFactor || 1
+  let cwFov = currentWep.fovFactor || 1
+
+  if (!(setting?.hex)) {
+    augment(definition)
+    definition.fovFactor = cbFov * cwFov
+    
+    if (!(definition?.statFactors?.health)) {
+      if (!(definition?.statFactors)) {
+        definition.statFactors = {}
+      }
+      definition.statFactors.health = hpMult // 1 * 1.5 = 1.5
+    } else {
+      definition.statFactors.health *= hpMult
+    }
+  } else {
+    if (cbFov <= cwFov) {
+      definition.fovFactor = cwFov
+    } else {
+      definition.fovFactor = cbFov
+    }
+  }
+  //unused
+ 
+  
+  //name, meta
+  if (currentWep.name == currentBody.name) {
+    definition.name = currentWep.name + " II"
+  } else {
+  definition.name = currentWep.name + '-' + currentBody.name
+  }
+  if (!(setting?.hex)) {
+    definition.allDMeta = combineMeta(currentWep, currentBody)
+  } else {
+    definition.DsearchType = "w"
+    definition.DupgradesFrom = currentWep.DupgradesFrom
+    definition.Dtier = currentWep.Dtier
+  }
+  return definition
+}
 try {
   const bodies = fs.readdirSync(bodyPath);
   const weps = fs.readdirSync(wepPath);
@@ -182,9 +265,6 @@ try {
 
 
 
-
-
-
   let currentBody = null;
   gotBodies.forEach(bodo => {
     console.log(bodo.name)
@@ -193,36 +273,16 @@ try {
       console.log(wepo.name)
       let currentWep = JSON.parse(JSON.stringify(wepo))
       if (wepo.Dtier == bodo.Dtier) {
-        //combining traits...
-        //HELP
-        let definition = JSON.parse(JSON.stringify(currentBody)); //i would have never figured this out... smh
-
-        definition.advancedObjectDef.barrels = [...currentBody.advancedObjectDef.barrels, ...currentWep.advancedObjectDef.barrels];
-        definition.advancedObjectDef.autoTurrets = [...currentBody.advancedObjectDef.autoTurrets, ...currentWep.advancedObjectDef.autoTurrets];
-        //stat
-
-        augment(definition)
-        //unused
-        let cbFov = currentBody.fovFactor || 1
-        let cwFov = currentWep.fovFactor || 1
-        definition.fovFactor = cbFov * cwFov
-        
-        if (!(definition?.statFactors?.health)) {
-          if (!(definition?.statFactors)) {
-            definition.statFactors = {}
-          }
-          definition.statFactors.health = hpMult // 1 * 1.5 = 1.5
+        if (hexers[wepo.Dtier - 1]) {
+          gotWeps.forEach(wepo2 => {
+            if (wepo2.Dtier == wepo.Dtier) {
+              let currentWep2 = JSON.parse(JSON.stringify(wepo2))
+              results.push(combine(combine(currentWep, rotateAll(currentWep2, 180), {hex: true}), currentBody))
+            }
+          })
         } else {
-          definition.statFactors.health *= hpMult
+          results.push(combine(currentWep, currentBody))
         }
-        
-        //name, meta
-        definition.name = currentWep.name + '-' + currentBody.name
-
-        definition.allDMeta = combineMeta(currentWep, currentBody)
-
-        results.push(definition);
-        console.log(definition.name);
       }
   });});
 
