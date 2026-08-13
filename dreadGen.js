@@ -77,20 +77,20 @@ function exportTank(def) { //try {
         console.log("fixedTierLevels' array is probably incorrect, maybe you forgot how many tiers you have?")
       }
     }
-    if (def.allDMeta[0].Dtier != 1) {
-      if (hexers[def.allDMeta[0].Dtier - 2]) {
-        let wepUpgradeFrom = def.allDMeta[0].DupgradesFrom
+    if (def.allDMeta[0].Dtier != 1) { //if we're not the first tier
+      if (hexers[def.allDMeta[0].Dtier - 2]) { //check if last tier is hexnoughts
+        let wepUpgradeFrom = def.allDMeta[0].DupgradesFrom //as a hexa this is the "front"'s upgrades from
         let bodUpgradeFrom = def.allDMeta[1].DupgradesFrom
         wepUpgradeFrom.forEach(wepFrom => {
-          map[def.allDMeta[0].Dtier - 2][0].forEach(wep2 => {
+          map[def.allDMeta[0].Dtier - 2][0].forEach(wep2 => { //use the map to get the name of other hexa parts in this tier
             let combinedName = ""
             if (wepFrom == wep2) {
-              combinedName = wepFrom + " II"
+              combinedName = wepFrom + " II" //if duplicated, name is turned into Weapon II
             } else {
-              combinedName = wepFrom + "-" + wep2
+              combinedName = wepFrom + "-" + wep2 //Weapon-Weapon2
             }
             bodUpgradeFrom.forEach(bodFrom => {
-            presetFields.upgradesFrom.push(combinedName+"-"+bodFrom)
+            presetFields.upgradesFrom.push(combinedName+"-"+bodFrom) //Weapon-Weapon2-Body || Weapon II-Body
             })
           })
         })
@@ -104,30 +104,30 @@ function exportTank(def) { //try {
     })
       }
     } else {
-      presetFields.upgradesFrom = [johnDreadnought.name]
+      presetFields.upgradesFrom = [johnDreadnought.name] //Since tier is 1, it will upgrade from root.
     }
     
-  presetJson.tanks.push(presetFields)
+  presetJson.tanks.push(presetFields) //Push to the jSON
 }
 
 function addMeta(part) {
   let input = part.upgradeMessage
-  let split = input.split("-")
+  let split = input.split("-") //take apart the upgradeMessage
   
-  part.DsearchType = split[0]
-  part.DupgradesFrom = split[1].split(",")
-  part.Dtier = split[2]
-  part.upgradeMessage = ""
+  part.DsearchType = split[0] //get type of weapon
+  part.DupgradesFrom = split[1].split(",") //get Upgradesfrom, which can be multiple parts
+  part.Dtier = split[2] //get tier
+  part.upgradeMessage = "" //clear uppgrademessage
 
   let mapTier = split[2] - 1
   let mapType = split[0]
-  let mapSide = 0
+  let mapSide = 0 //sorry
   if (mapType == 'w') {
     mapSide = 0
   } else {
     mapSide = 1
   }
-  //ASSuming json name is same as real tank name
+  //ASSuming json name is same as real tank name (of course it is)
   map[mapTier][mapSide].push([part.name])
 
   console.log(JSON.stringify(part, null, 2))
@@ -154,46 +154,46 @@ function combine(currentWep, currentBody, setting) {
   if (setting) {
   setting.hex = setting?.hex || false
   }
-  let definition = JSON.parse(JSON.stringify(currentBody)); //i would have never figured this out... smh
+  let definition = JSON.parse(JSON.stringify(currentBody)); //copy shit
 
-  definition.advancedObjectDef.barrels = [...currentBody.advancedObjectDef.barrels, ...currentWep.advancedObjectDef.barrels];
-  definition.advancedObjectDef.autoTurrets = [...currentBody.advancedObjectDef.autoTurrets, ...currentWep.advancedObjectDef.autoTurrets];
+  definition.advancedObjectDef.barrels = [...currentBody.advancedObjectDef.barrels, ...currentWep.advancedObjectDef.barrels]; 
+  definition.advancedObjectDef.autoTurrets = [...currentBody.advancedObjectDef.autoTurrets, ...currentWep.advancedObjectDef.autoTurrets]; //this is all merging
   //stat
 
-  let cbFov = currentBody.fovFactor || 1
-  let cwFov = currentWep.fovFactor || 1
+  let cbFov = currentBody.fovFactor ?? 1
+  let cwFov = currentWep.fovFactor ?? 1
 
-  if (!(setting?.hex)) {
+  if (!(setting?.hex)) { //we are not hex
     augment(definition)
     definition.fovFactor = cbFov * cwFov
-    
-    if (!(definition?.statFactors?.health)) {
-      if (!(definition?.statFactors)) {
-        definition.statFactors = {}
-      }
-      definition.statFactors.health = hpMult // 1 * 1.5 = 1.5
-    } else {
-      definition.statFactors.health *= hpMult
-    }
-  } else {
-    if (cbFov <= cwFov) {
+  } else { //if we are hex
+    if (cbFov <= cwFov) { //pick highest fov if hexadread
       definition.fovFactor = cwFov
     } else {
       definition.fovFactor = cbFov
     }
+  }
+
+  if (!(definition?.statFactors?.health)) {
+      if (!(definition?.statFactors)) {
+        definition.statFactors = {} //inits statFactors if they dont exist
+      }
+      definition.statFactors.health = hpMult // 1 * 1.5 = 1.5
+    } else {
+      definition.statFactors.health *= hpMult 
   }
   //unused
  
   
   //name, meta
   if (currentWep.name == currentBody.name) {
-    definition.name = currentWep.name + " II"
+    definition.name = currentWep.name + " II" //if duped, make it II for hexnoughts
   } else {
   definition.name = currentWep.name + '-' + currentBody.name
   }
   if (!(setting?.hex)) {
     definition.allDMeta = combineMeta(currentWep, currentBody)
-  } else {
+  } else { // if hexnought prepare the single component with the "front"'s meta
     definition.DsearchType = "w"
     definition.DupgradesFrom = currentWep.DupgradesFrom
     definition.Dtier = currentWep.Dtier
@@ -204,6 +204,7 @@ try {
   const bodies = fs.readdirSync(bodyPath);
   const weps = fs.readdirSync(wepPath);
   // Collection
+  // read defs from files, prepare them to be processed
   bodies.forEach(element => {
     let body = JSON.parse(fs.readFileSync(path.join(bodyPath, element), 'utf8'));
     addMissing(body)
@@ -223,13 +224,10 @@ try {
 
   //go my dread generator!
 
-
-
-
   //we gotta add the dreadnutter first
 
   let rootDread = {
-            customDef: johnDreadnought,
+            customDef: johnDreadnought, //Dreadnoughts.json at resource/
             levelRequirement: tierOne,
             name: johnDreadnought.name,
             upgradesFrom: [], // it will be filled now, god help us
@@ -238,8 +236,8 @@ try {
   let newString = ""
   if (config.rootUpgradableTo) {
     presetJson.tanks.forEach(element => {
-      if (element.levelRequirement >= 45) {
-        if (element.customDef === null) {
+      if (element.levelRequirement >= 45) { 
+        if (element.customDef === null) { //we generate the upgradekeys for level 45 tanks, because how the name is done this is doable. it is an entry for a default since customdef is null
           //regular tanks
           let ment = JSON.parse(JSON.stringify(element)) 
           let name = ment.name
@@ -255,45 +253,45 @@ try {
           rootDread.upgradesFrom.push(newString)
           newString = ""
       } else {
-        //added custom tanks
+        //added custom tanks that were in the preset already
         rootDread.upgradesFrom.push(element.name)
       }
     }
   })
   }
-  presetJson.tanks.push(rootDread)
+  presetJson.tanks.push(rootDread) //adds final johndread to json
 
 
 
   let currentBody = null;
-  gotBodies.forEach(bodo => {
+  gotBodies.forEach(bodo => { //loop through bodies
     console.log(bodo.name)
-    currentBody = JSON.parse(JSON.stringify(bodo))
-    gotWeps.forEach(wepo => {
+    currentBody = JSON.parse(JSON.stringify(bodo)) //copy
+    gotWeps.forEach(wepo => { //loop through weps
       console.log(wepo.name)
-      let currentWep = JSON.parse(JSON.stringify(wepo))
-      if (wepo.Dtier == bodo.Dtier) {
-        if (hexers[wepo.Dtier - 1]) {
-          gotWeps.forEach(wepo2 => {
-            if (wepo2.Dtier == wepo.Dtier) {
-              let currentWep2 = JSON.parse(JSON.stringify(wepo2))
-              results.push(combine(combine(currentWep, rotateAll(currentWep2, 180), {hex: true}), currentBody))
+      let currentWep = JSON.parse(JSON.stringify(wepo)) //copy
+      if (wepo.Dtier == bodo.Dtier) { //if their tier match, they must be combined
+        if (hexers[wepo.Dtier - 1]) { //if tier is hexed
+          gotWeps.forEach(wepo2 => { //loop through weps again
+            if (wepo2.Dtier == wepo.Dtier) { //if their ti- i already said that
+              let currentWep2 = JSON.parse(JSON.stringify(wepo2)) //copy
+              results.push(combine(combine(currentWep, rotateAll(currentWep2, 180), {hex: true}), currentBody)) //only for genius
             }
           })
         } else {
-          results.push(combine(currentWep, currentBody))
+          results.push(combine(currentWep, currentBody)) //regular combine
         }
       }
   });});
 
   results.forEach(function (def) {
-    exportTank(def)
+    exportTank(def) //when done, export all tanks
     
   });
 
   
   try {
-  const genedPath = path.join(__dirname, 'out', 'autogen.json');
+  const genedPath = path.join(__dirname, 'out', 'autogen.json'); //write presetJson to autogen.json
   fs.writeFileSync(genedPath, JSON.stringify(presetJson, null, 2));
   console.log("Succesful, check out/autogen!")
     } catch (err) {console.log(err.message)}
