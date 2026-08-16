@@ -26,7 +26,7 @@ const hpMult = config.hpMult
 //tier array = w array and b array
 //this creates a list of all possible combinations
 const WBarray = [[],[]]
-let map = [WBarray, WBarray, WBarray, WBarray, WBarray, WBarray]; //expand if you use more than this!
+let map = Array.from({ length: tiers }, () => [[], []]); //die
 
 const bodyPath = path.join(__dirname, 'bodies');
 const wepPath = path.join(__dirname, 'weps');
@@ -78,36 +78,57 @@ function exportTank(def) { //try {
       }
     }
     if (def.allDMeta[0].Dtier != 1) { //if we're not the first tier
-      if (hexers[def.allDMeta[0].Dtier - 2]) { //check if last tier is hexnoughts
-        let wepUpgradeFrom = def.allDMeta[0].DupgradesFrom //as a hexa this is the "front"'s upgrades from
+      if (hexers[def.allDMeta[0].Dtier - 2])  {
+        let mappart = map[def.allDMeta[0].Dtier - 2][0]
         let bodUpgradeFrom = def.allDMeta[1].DupgradesFrom
-        wepUpgradeFrom.forEach(wepFrom => {
-          map[def.allDMeta[0].Dtier - 2][0].forEach(wep2 => { //use the map to get the name of other hexa parts in this tier
-            let combinedName = ""
-            if (wepFrom == wep2) {
-              combinedName = wepFrom + " II" //if duplicated, name is turned into Weapon II
-            } else {
-              combinedName = wepFrom + "-" + wep2 //Weapon-Weapon2
+        if (Symbol.iterator in Object(def.allDMeta[0].DhexTrace[0])) {//check if last tier is hexnoughts
+          let wUFrom = def.allDMeta[0].DhexTrace[0]
+          let w2UFrom = def.allDMeta[0].DhexTrace[1] //as a hexa this is the "front"'s upgrades from
+          let namer = ""
+          for (const front of wUFrom) {
+            for (const back of w2UFrom) {
+                if (front == back) {
+                  namer = front + " II"
+                } else {
+                  namer = front + "-" + back
+                }
+                bodUpgradeFrom.forEach(bodFrom => {
+                  presetFields.upgradesFrom.push(namer+"-"+bodFrom) //Weapon-Weapon2-Body || Weapon II-Body
+                })
             }
+          }
+        } else {
+          let wUFrom = def.allDMeta[0].DupgradesFrom
+          let namer = []
+          for (const other of mappart) {
+            namer = []
+            if (wUFrom == other.name) {
+              namer.push(wUFrom + " II")
+            } else {
+              namer.push(wUFrom + "-" + other.name)
+              namer.push(other.name + "-" + wUFrom)
+            }
+
             bodUpgradeFrom.forEach(bodFrom => {
-            presetFields.upgradesFrom.push(combinedName+"-"+bodFrom) //Weapon-Weapon2-Body || Weapon II-Body
+              for (const naem of namer) {
+                  presetFields.upgradesFrom.push(naem+"-"+bodFrom) //Weapon-Weapon2-Body || Weapon2-Weapon-Body || Weapon II-Body
+              }
             })
-          })
-        })
+          }
+        }
       } else {
-        let wepUpgradeFrom = def.allDMeta[0].DupgradesFrom
-        let bodUpgradeFrom = def.allDMeta[1].DupgradesFrom
-        wepUpgradeFrom.forEach(wepFrom => {
-          bodUpgradeFrom.forEach(bodFrom => {
-            presetFields.upgradesFrom.push(wepFrom+"-"+bodFrom)
-      })
+      let wepUpgradeFrom = def.allDMeta[0].DupgradesFrom
+      let bodUpgradeFrom = def.allDMeta[1].DupgradesFrom
+      wepUpgradeFrom.forEach(wepFrom => {
+        bodUpgradeFrom.forEach(bodFrom => {
+          presetFields.upgradesFrom.push(wepFrom+"-"+bodFrom)
     })
-      }
-    } else {
-      presetFields.upgradesFrom = [johnDreadnought.name] //Since tier is 1, it will upgrade from root.
-    }
-    
-  presetJson.tanks.push(presetFields) //Push to the jSON
+  })
+}
+  } else {
+    presetFields.upgradesFrom = [johnDreadnought.name] //Since tier is 1, it will upgrade from root.
+  }
+    presetJson.tanks.push(presetFields) //Push to the jSON
 }
 
 function addMeta(part) {
@@ -128,14 +149,13 @@ function addMeta(part) {
     mapSide = 1
   }
   //ASSuming json name is same as real tank name (of course it is)
-  map[mapTier][mapSide].push([part.name])
-
+  map[mapTier][mapSide].push({name: part.name, uf: part.DupgradesFrom})
   console.log(JSON.stringify(part, null, 2))
 }
 
 function combineMeta(w, b) {
   //w [0], b [1].
-  return [{"DsearchType": w.DsearchType, "DupgradesFrom": w.DupgradesFrom, "Dtier": w.Dtier},{"DsearchType": b.DsearchType, "DupgradesFrom": b.DupgradesFrom, "Dtier": b.Dtier}]
+  return [{"DsearchType": w.DsearchType, "DupgradesFrom": w.DupgradesFrom, "Dtier": w.Dtier, "DhexTrace": w.DhexTrace ?? []},{"DsearchType": b.DsearchType, "DupgradesFrom": b.DupgradesFrom, "Dtier": b.Dtier}]
 } 
 
 function rotateAll(def, angle) {
@@ -197,6 +217,7 @@ function combine(currentWep, currentBody, setting) {
     definition.DsearchType = "w"
     definition.DupgradesFrom = currentWep.DupgradesFrom
     definition.Dtier = currentWep.Dtier
+    definition.DhexTrace = [currentWep.DupgradesFrom, currentBody.DupgradesFrom]
   }
   return definition
 }
